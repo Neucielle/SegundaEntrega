@@ -1,14 +1,15 @@
-CREATE DATABASE AgenciaValeDasEstrelas;
-use AgenciaValeDasEstrelas;
+CREATE DATABASE Agenciadeviagens;
+use Agenciadeviagens;
 
 CREATE TABLE Cliente (
-IDCliente int AUTO_INCREMENT PRIMARY KEY,
-nome VARCHAR(50) NOT NULL,
-sobrenome VARCHAR(50),
-endereco TEXT(50) NOT NULL,
-email VARCHAR(50) NOT NULL,
-telefone VARCHAR(20)
+    IDCliente INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(50) NOT NULL,
+    sobrenome VARCHAR(50),
+    endereco TEXT NOT NULL,
+    email VARCHAR(50) NOT NULL,
+    telefone VARCHAR(20)
 );
+
 
 CREATE TABLE Cadastro (
  IDCadastro INT PRIMARY KEY AUTO_INCREMENT,
@@ -35,13 +36,10 @@ CREATE TABLE Viagem (
 );
 
 CREATE TABLE CompraViagem (
-  IDCompra INT PRIMARY KEY AUTO_INCREMENT,
-  DataCompra DATE,
-  PrecoPago DECIMAL(10, 2),
-  IDCliente INT,
-  FOREIGN KEY (IDCliente) REFERENCES cliente (IDCliente)
+    IdCompra INT AUTO_INCREMENT PRIMARY KEY,
+    DataCompra DATE,
+    PrecoPago DECIMAL(10, 2)
 );
-
 
 
 
